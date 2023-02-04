@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
+import { toast } from "react-toastify"
 
 import Api from "../../services/Api";
+import Buttons from "../../components/Buttons";
 
 import "./index.css";
 
@@ -27,12 +29,33 @@ function Detalhes() {
         };
 
         loadDetailsMovie();
-    }, []);
+    }, [id]);
+
+    const saveMovie = () => {
+        const favoriteMovies = localStorage.getItem("@webfilme");
+
+        let movieSave = JSON.parse(favoriteMovies) || [];
+
+        const hasMovie = movieSave.some((item) => {
+            return item.id === movie.id
+        });
+
+        if(hasMovie) {
+            toast.warn("Você ja tem esse filme salvo!");
+            return
+        };
+
+        movieSave.push(movie);
+
+        localStorage.setItem("@webfilme", JSON.stringify(movieSave));
+        toast.success("Filme salvo com sucesso!");
+    };
+
 // ===================================================================
     if(loading) {
         return(
             <div className="loading">
-                <span class="loader"></span>
+                <span className="loader"></span>
             </div>
         )
     } // loading
@@ -47,9 +70,9 @@ function Detalhes() {
             <p><span>Avaliação:</span> {movie.vote_average} / 10</p>
 
             <div className="btn-action">
-                <button>Salvar</button>
+                <Buttons onClick={saveMovie}>Salvar</Buttons>
                 <Link to="/">
-                    <button>Voltar</button>
+                    <Buttons>Voltar</Buttons>
                 </Link>
             </div> {/* btn-action */}
         </div>

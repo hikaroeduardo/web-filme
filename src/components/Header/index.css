@@ -22,33 +22,15 @@
 .header button {
     padding: .5rem 1rem;
     cursor: pointer;
-    border: 1px solid #00932E;
+    border: 3px solid #00932E;
     background-color: transparent;
     color: #fff;
     font-weight: bold;
     transition: .3s ease-out;
+    margin-top: 1rem;
 }
 
 .header button:hover {
     background-color: #00932E;
     color: #000;
-}
-
-.search {
-    width: 20%;
-}
-
-.search input {
-    width: 100%;
-    padding: .5rem;
-    outline: none;
-    border: 2px solid #00932E;
-    border-radius: 4px;
-    font-size: .9rem;
-    background-color: transparent;
-    color: #fff;
-}
-
-.search input::placeholder {
-    color: #fff;
 }

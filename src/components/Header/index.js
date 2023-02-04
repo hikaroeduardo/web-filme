@@ -8,10 +8,6 @@ function Header() {
                 <h1>Web<span>Filmes</span></h1>
             </Link>
 
-            <div className="search">
-                <input type="text" placeholder="Pesquise sobre um filme..." />
-            </div> {/* search */}
-
             <Link to="/salvos">
                 <button>Filmes Salvos</button>
             </Link>

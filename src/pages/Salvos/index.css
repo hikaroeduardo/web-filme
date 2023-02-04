@@ -26,29 +26,37 @@
     } 
 
 
-.page-details {
-    width: 60%;
-    margin: 0 auto;
-}
-
-.page-details img {
-    width: 100%;
-    margin: 1.12rem 0;
-    border-radius: .5rem;
-}
-
-.page-details p {
-    margin: 1.12rem 0;
-}
-
-.page-details p span {
-    font-weight: bold;
-}
-
-.btn-action {
+.movies-save {
     display: flex;
+    flex-direction: column;
 }
 
-.btn-action a {
-    margin-left: .8rem;
+.movies-save h1 {
+    text-align: center;
+    margin-bottom: 1.8rem;
+}
+
+.not-movie {
+    text-align: center;
+}
+
+.list li {
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #7c7c7c;
+    margin-bottom: 1.12rem;
+}
+
+.action {
+    display: flex;
+    align-items: baseline;
+}
+
+.action a {
+    text-decoration: none;
+    margin-right: 2.25rem;
+    color: #000;
+    font-weight: bold;
 }

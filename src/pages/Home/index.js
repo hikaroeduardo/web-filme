@@ -33,7 +33,7 @@ function Home() {
     if(loading) {
         return(
             <div className="loading">
-                <span class="loader"></span>
+                <span className="loader"></span>
             </div>
         )
     } // loading
