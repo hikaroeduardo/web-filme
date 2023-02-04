@@ -7,6 +7,7 @@ import "./index.css";
 // ======================================================================================
 function Home() {
     const [movies, setMovies] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const loadMovies = async () => {
@@ -21,12 +22,22 @@ function Home() {
             const movies = await response.data.results;
 
             setMovies(movies);
+
+            setLoading(false);
         };
 
         loadMovies();
     }, []);
 
-// ====================================================================================== 
+// ======================================================================================
+    if(loading) {
+        return(
+            <div className="loading">
+                <span class="loader"></span>
+            </div>
+        )
+    } // loading
+
     return(
         <div className="home-page">
             <h1>filmes <span>em cartaz</span></h1>
