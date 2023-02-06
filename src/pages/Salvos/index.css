@@ -45,6 +45,7 @@
     width: 80%;
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
     border-bottom: 1px solid #7c7c7c;
     margin-bottom: 1.12rem;
 }
@@ -59,4 +60,25 @@
     margin-right: 2.25rem;
     color: #000;
     font-weight: bold;
+}
+
+@media (max-width: 800px) {
+    .list li p, .action a {
+        font-size: .9rem;
+    }
+    
+    .btn-delete {
+        font-size: .7rem;
+    }
+}
+
+@media (max-width: 630px) {
+    .list li {
+        flex-direction: column;
+    }
+
+    .list li p {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
 }

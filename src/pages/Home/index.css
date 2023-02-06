@@ -93,3 +93,42 @@
 .btn-details {
     width: 100%;
 }
+
+@media (max-width: 1100px) {
+    .movie button {
+        font-size: .8rem;
+    }
+}
+
+@media (max-width: 990px) {
+    .movie h3 {
+        font-size: .9rem;
+    }
+}
+
+@media (max-width: 920px) {
+    .list-movies li {
+        width: 30%;
+    }
+}
+
+@media (max-width: 750px) {
+    .list-movies li {
+        width: 48%;
+    }
+}
+
+@media (max-width: 500px) {
+    .list-movies ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .list-movies li {
+        width: 90%;
+    }
+
+    .home-page h1 {
+        font-size: 1.5rem;
+    }
+}

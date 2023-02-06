@@ -54,7 +54,7 @@ function Salvos() {
                             <p>{item.title}</p>
                             <div className="action">
                                 <Link to={`/detalhes/${item.id}`}>Ver detalhes</Link>
-                                <Buttons onClick={() => deleteMovie(item.id)}>Excluir</Buttons>
+                                <Buttons className="btn-delete" onClick={() => deleteMovie(item.id)}>Excluir</Buttons>
                             </div>
                         </li>
                     )

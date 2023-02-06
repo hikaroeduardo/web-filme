@@ -52,3 +52,23 @@
 .btn-action a {
     margin-left: .8rem;
 }
+
+@media (max-width: 780px) {
+    .page-details {
+        width: 70%;
+    }
+
+    .page-details h1 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .page-details {
+        width: 80%;
+    }
+
+    .page-details h1 {
+        font-size: 1.5rem;
+    }
+}
